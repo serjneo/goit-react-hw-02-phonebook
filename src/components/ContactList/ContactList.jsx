@@ -1,11 +1,13 @@
-function ContactList({contacts, onRemove}) {
+import s from './ContactList.module.css'
+
+function ContactList({ contacts, onRemove }) {
     return (
-        <ul>
+        <ul className={s.list}>
             {contacts.map(contact => (
                 <li key={contact.id}>
-                    <p>Name: { contact.name }</p>
-                    <p>Number: {contact.number}</p>
-                    <button onClick={()=> onRemove(contact.id)} type="button">Delete</button>
+                    <p className={s.title}>Name: { contact.name }</p>
+                    <p className={s.title}>Number: {contact.number}</p>
+                    <button className={s.button} onClick={()=> onRemove(contact.id)} type="button">Delete</button>
                 </li>   
             ))}
         </ul>

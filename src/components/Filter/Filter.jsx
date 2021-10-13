@@ -1,6 +1,9 @@
-function Filter({value, onChange}) {
+import s from './Filter.module.css';
+
+function Filter({ value, onChange }) {
     return (
-        <input type="text" name="filter" onChange={onChange} value={value}></input>
+        <input className={s.input} type="text" name="filter" onChange={onChange} value={value}
+        placeholder="search contact"></input>
     )
 }
 
